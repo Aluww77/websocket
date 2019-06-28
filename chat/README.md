@@ -12,3 +12,5 @@ npm install
 node wsServer.js/wsServer02.js/...
 ```
 
+##相关文档
+http://liufeize.com/2017/11/02/socket-io/
