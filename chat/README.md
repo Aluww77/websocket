@@ -8,7 +8,7 @@ git clone https://github.com/Aluww77/websocket.git
 npm install
 ```
 ## start
-```bash
+```
 node wsServer.js/wsServer02.js/...
 ```
 
