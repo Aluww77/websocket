@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      var socket = io('ws://localhost:5000');
+      var socket = io('ws://172.16.50.29:3000');
       socket.on('news', function (data) {
         console.log(data);
         socket.emit('my other event', {

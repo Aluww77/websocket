@@ -1,5 +1,5 @@
 html,body {
-    background: #ccc;
+    background: #cccccc38;
     padding: 20px 0 20px 0;
     height: 100%;
 }
@@ -13,14 +13,13 @@ h1 {
     height: 100%;
 }
 #inputgrop {
-    display: block;
     width: 100%;
-    position: absolute;
     min-height: 40px;
-    bottom: 0;
+    margin-top: 20px;
 }
 #content {
-    height: auto;
+    height: 80%;
+    overflow: auto;
 }
 .alert {
     z-index: 100;

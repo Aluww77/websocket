@@ -1,6 +1,6 @@
 var ws = require("nodejs-websocket")
 
-var PORT = 8001
+var PORT = 3000
 
 // Scream server example: "hi" -> "HI!!!"
 var server = ws.createServer(function (conn) {
@@ -12,6 +12,7 @@ var server = ws.createServer(function (conn) {
   conn.on("close", function (code, reason) {
     console.log("Connection closed")
   })
+  // 出错时触发，并且会关闭连接。这时可以根据错误信息进行按需处理
   conn.on("error", function (err) {
     console.log("handle err")
     console.log(err)

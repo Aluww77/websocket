@@ -2,12 +2,11 @@
  * Created by baotongxue on 2019/6/27.
  */
 $(function() {
-    const url = 'http://127.0.0.1:3000';
+    const url = 'ws://172.16.50.29:3000';
     let _username = null;
     let _$inputname = $("#name");
     let _$loginButton = $("#loginbutton");
     let _$chatinput = $("#chatinput");
-    let _$inputGroup = $("#inputgrop");
     let _$imgButton = $("#imgbutton");
     let _$imgInput = $("#imginput");
     let _$listGroup = $(".list-group");
@@ -95,6 +94,7 @@ $(function() {
                 _$listGroup.append(`<a href="#" name="${_user.username}" class="list-group-item"  data-toggle="modal" data-target="#myModal"><svg class="icon" aria-hidden="true" style="font-size: 2em"><use xlink:href="#${_user.touXiangUrl}"></use></svg>&nbsp;&nbsp;${_user.username}</a>`);
             }
         }
+        setInputPosition()
     };
 
     let sendMessage = function() {
@@ -110,8 +110,7 @@ $(function() {
     };
 
     let setInputPosition = function() {
-        let height = $(window).height() > $('#content p:last').offset().top + $('#content p:last').height() * 2 ? $(window).height() : $('#content p:last').offset().top + $('#content p:last').height() * 2;
-        _$inputGroup.css({ 'top': height });
+        $('#content').scrollTop($('#content')[0].scrollHeight)
     };
 
     let showMessage = function(data) {

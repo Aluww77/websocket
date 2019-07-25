@@ -1,7 +1,7 @@
 var app = require("http").createServer()
 var io = require("socket.io")(app)
 
-var PORT = 6001
+var PORT = 3000
 
 var clientCount = 0
 

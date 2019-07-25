@@ -1,7 +1,7 @@
 var app = require('http').createServer()
 var io = require('socket.io')(app);
 
-app.listen(5000);
+app.listen(3000);
 io.on('connection', function (socket) {
   socket.emit('news', {
     hello: 'world'

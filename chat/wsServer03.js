@@ -1,6 +1,6 @@
 var ws = require("nodejs-websocket")
 
-var PORT = 3001
+var PORT = 3000
 
 var clientCount = 0;
 

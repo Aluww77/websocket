@@ -10,7 +10,7 @@
     <button id="sendBtn">发送</button>
 
     <script>
-      var websocket = new WebSocket("ws://localhost:4001/");
+      var websocket = new WebSocket("ws://172.16.50.29:3000/");
       function showMessage(str, type) {
         var div = document.createElement("div");
         div.innerHTML = str;

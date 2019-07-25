@@ -10,7 +10,6 @@ let usersNum = 0;
 const _sockets = [];                 //将socket和用户名匹配
 
 server.listen(PORT)
-
 /**
  * app.get(): express中的一个中间件，用于匹配get请求，所谓中间件就是在该轮http请求中依次执行的一系列函数。
  * '/': 它匹配get请求的根路由 '/'也就是 127.0.0.1:3000/就匹配到他了
@@ -18,7 +17,7 @@ server.listen(PORT)
  * req带表浏览器的请求对象，res代表服务器的返回对象
  */
 app.get('/',(req,res)=>{
-    res.redirect('/index07.html');       // express的重定向函数。如果浏览器请求了根路由'/',浏览器就给他重定向到 '127.0.0.1:3000/chat.html'路由中
+    res.redirect('/index07.html');       // express的重定向函数。如果浏览器请求了根路由'/',浏览器就给他重定向到 '127.0.0.1:3000/index.html'路由中
 });
 
 /**
