@@ -5,9 +5,9 @@ var PORT = 3000
 // Scream server example: "hi" -> "HI!!!"
 var server = ws.createServer(function (conn) {
   console.log("New connection")
-  conn.on("text", function (str) {
+  conn.on("text", function (str) { // 客户端有消息发送过来时的回调函数
     console.log("Received " + str)
-    conn.sendText(str.toUpperCase() + "!!!")
+    conn.sendText(str.toUpperCase() + "!!!") // 发送给客户端消息
   })
   conn.on("close", function (code, reason) {
     console.log("Connection closed")

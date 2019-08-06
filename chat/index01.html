@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>搭建自己的websocket server</title>
+    <title>WebSocket第一个案例</title>
   </head>
   <body>
     <h1>Echo Test</h1>
@@ -11,7 +11,7 @@
     <div id="recv"></div>
 
     <script>
-      var websocket = new WebSocket("ws://localhost:3000/");
+      var websocket = new WebSocket("wss://echo.websocket.org/"); // 服务器地址
       websocket.onopen = function () { // 连接成功的回调
         console.log("websocket open");
         document.getElementById("recv").innerHTML = "Connected";

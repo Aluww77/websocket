@@ -2,7 +2,7 @@
  * Created by baotongxue on 2019/6/27.
  */
 $(function() {
-    const url = 'ws://172.16.50.29:3000';
+    const url = 'ws://172.16.49.144:3001';
     let _username = null;
     let _$inputname = $("#name");
     let _$loginButton = $("#loginbutton");
@@ -70,7 +70,6 @@ $(function() {
         /**
          * 显示聊天界面，并显示一行文字，表示是谁的聊天界面
          * 一个2s的弹框，显示欢迎字样
-         * 这里我使用了ES6的语法``中可以使用${}在里面写的变量可以直接被浏览器渲染
          */
         $(`<h2 style="text-align: center">${_username}的聊天室</h2>`).insertBefore($("#content"));
         $(`<strong>欢迎你</strong><span>${_username}!</span>`).insertAfter($('#myalert button'));

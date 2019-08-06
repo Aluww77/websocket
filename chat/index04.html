@@ -10,7 +10,7 @@
     <button id="sendBtn">发送</button>
 
     <script>
-      var websocket = new WebSocket("ws://172.16.50.29:3000/");
+      var websocket = new WebSocket("ws://localhost:3000/");
       function showMessage(str, type) {
         var div = document.createElement("div");
         div.innerHTML = str;
@@ -34,7 +34,7 @@
         console.log("websocket close");
       }
       websocket.onmessage = function (e) {
-        console.log(e.data);
+        console.log(e);
         var mes = JSON.parse(e.data);
         showMessage(mes.data, mes.type);
       }

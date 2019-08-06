@@ -4,7 +4,7 @@ var server = require("http").createServer(app)
 const path = require('path');
 var io = require("socket.io")(server)
 
-var PORT = 3000
+var PORT = 3001
 const users = [];                    //用来保存所有的用户信息
 let usersNum = 0;
 const _sockets = [];                 //将socket和用户名匹配
@@ -70,8 +70,6 @@ io.on('connection',(socket)=>{              //监听客户端的连接事件
 
     /**
      * 监听sendMessage,我们得到客户端传过来的data里的message，并存起来。
-     * 我使用了ES6的for-of循环，和ES5 的for-in类似。
-     * for-in是得到每一个key，for-of 是得到每一个value
      */
     socket.on('sendMessage',(data)=>{
         for(let _user of users) {
